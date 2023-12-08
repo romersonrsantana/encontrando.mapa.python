@@ -1,0 +1,7 @@
+valor = input('Digite algo: ')
+print('Esse valor poderá ser convertido em número?', valor.isnumeric())
+print('Analizando os dados, o que foi digitado será considerado letra: ', valor.isalpha())
+print('Esse dado é composto por letra e/ou número: ', valor.isalnum())
+print('Quando associado a boleano, o dado digitado é: ', bool(valor))
+print('O dado possui letra minuscula', valor.islower())
+print('Esse dado é composto somente por letra maiuscula: ', valor.isupper())
