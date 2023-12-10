@@ -1,4 +1,5 @@
 valor = input('Digite algo: ')
+print('Seu tipo primitivo é ' , type(valor))
 print('Esse valor poderá ser convertido em número?', valor.isnumeric())
 print('Analizando os dados, o que foi digitado será considerado letra: ', valor.isalpha())
 print('Esse dado é composto por letra e/ou número: ', valor.isalnum())
