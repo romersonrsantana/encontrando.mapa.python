@@ -1,0 +1,5 @@
+print('\n\n Vamos te ajudar a calcular quanto de tinta você vai precisar: ')
+alturaparede = float(input('\n Digite a altura da parede: '))
+larguraparede = float(input('\n Digite a lagura da parede: '))
+area = (alturaparede*larguraparede)
+print('\n Os valores digitados foram {:.2f} metros de altura, {:.2f} metros de largura.\n\n Considerando a área total de {:.2f} metros quadrados e que cada balde pode pintar apenas 2 metros quadrados, \n\n serão necessários {} baldes de tintas para pintar toda a parede.\n\n' .format(alturaparede, larguraparede, area, (area/2)))
