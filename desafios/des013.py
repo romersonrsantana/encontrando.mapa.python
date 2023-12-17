@@ -7,5 +7,4 @@ salario = float(input('Digite seu salário atual: '))
 taxareajuste = float(input('\n\nEscolha quantos porcento será reajustado: '))
 novosalario = salario + (salario*(taxareajuste/100))
 
-print('\n\nCom um reajuste de {:.2f} %. Seu salário que era R${:.2f} reais, agora é R${:.2f} reais. \n\n Seu reajuste foi de R${:.2f} reais \n\n' .format(taxareajuste, salario, novosalario, (novosalario - salario)))
-
+print('\n\nCom um reajuste de {:.2f}%. Seu salário que era R${:.2f}, agora é R${:.2f}. \n\n Seu reajuste foi de R${:.2f} \n\n' .format(taxareajuste, salario, novosalario, (novosalario - salario)))

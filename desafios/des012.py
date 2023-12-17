@@ -8,4 +8,4 @@ descontoporcento = int(input('\n\n Insira quanto de desconto você deseja aplica
 desconto = (precoproduto * (descontoporcento / 100))
 valorfinal = (precoproduto - desconto)
 
-print('\n\n O valor informado para o desconto foi de R$ {:.2f} o desconto será de {}%. \n\n Caro cliente o desconto será de R$ {:.2f} reais. \n\n Seu produto sairá por R$ {:.2f} reais \n\n' .format(precoproduto, descontoporcento, desconto, valorfinal ))
+print('\n\n O valor informado para o desconto foi de R$ {:.2f} o desconto será de {}%. \n\n Caro cliente o desconto será de R$ {:.2f}. \n\n Seu produto sairá por R$ {:.2f} \n\n' .format(precoproduto, descontoporcento, desconto, valorfinal ))
