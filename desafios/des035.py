@@ -1,13 +1,6 @@
-print('\n Bem vindo!! \n\n Projeções de Reajuste salarial\n\n')
-salario = float(input('\n\n Informe o salário: '))
-if salario > 36000.00:
-    print('\n\n [INFORME OUTRO VALOR]. \n Considerando a folha salarial dessa empresa, não é permitido o calculo desse valor!!\n\n')
-else:
-    if salario <= 350.00:
-        print('\n\n [ERRO]. Seu salário está muito abaixo, procure seu sindicato \n e verifique se há algo de errado!\n\n')
-    else:
-        if salario < 1250.00:
-            print('\n\n O valor do reajuste será de 15%.\n\n O equivalente á R$ {:.2f} reais. Totalizando R$ {:.2f} reais.\n\n'.format(salario*(15/100)+salario, salario))
-        else:
-            if salario > 1250.00:
-                print('\n\n O valor do reajuste será de 10%. \n\n O equivalente á R$ {:.2f} reais. Totalizando R$ {:.2f} reais.\n\n'.format(salario*(10/100), salario*(10/100)+salario))
+print('\n\n Condição de existência: --- triangulo ---- \n\n informe o tamanho de 3 retas e descubra se elas podem formar um triângulo...\n\n')
+reta1 = float(input('Informe o tamanho da reta 01: '))
+reta2 = float(input('Informe o tamanho da reta2: '))
+reta3 = float(input('Inorme o tamanho da reta 03: '))
+if reta2 - reta3 < reta1 and reta2 + reta3 > reta3:
+    
