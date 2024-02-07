@@ -9,7 +9,7 @@ else:
     if n2 < n1 and n2 < n3:
         print('\n\n O menor número é: {}'.format(n2))
     else:
-        print('\n\n O menor número informado é: {} \n\n'.format(n3))
+        print('\n\n O menor número informado é: {} \n\n'.format(n2))
 
 if n1 > n2 and n1 > n3:
     print('\n\n O maior valor informado é: {} \n\n'.format(n1))
