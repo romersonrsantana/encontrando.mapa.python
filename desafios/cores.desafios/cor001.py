@@ -17,4 +17,4 @@ else:
         if ano < 1904 or ano > atual:
             print('\n \033[1;31m[ERRO] Digite uma data válida \033[m \n\n')
         else:
-            print('\n Nome: {} \n\n Idade: {} \n\n Mês: {} \n\n Ano: {} \n'.format(nome,idade,mes,ano))
+            print('\n\033[1;32mNome:\033[m {}{} \n\n \033[1;32mIdade:\033[m {}{} anos \n\n \033[1;32mMês:\033[m {}{} \n\n\033[1;32mAno:\033[m {}{}{} \n'.format('\033[1;34m',nome,'\033[1;34m',idade,'\033[1;34m',mes,'\033[1;34m',ano,'\033[m'))
