@@ -18,4 +18,4 @@ elif wage > 90000.00:
     print('\n',21*'{}===','\n{}'.format(colors['bluemarc'],colors['clean']))
     print('{} Sorry, but this financing is for people with a salary between US1.000,00 and US90.000,00. Leave your contact details and our consultants will contact you and indicate the ideal financing for you. Thanks!')
 #Quantidade de parcelas
-installmentsinyears = int(input(''))
+installmentsinyears = int(input('How many years,  to uai'))u
