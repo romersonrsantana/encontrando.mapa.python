@@ -17,5 +17,21 @@ if wage < 1000.00:
 elif wage > 90000.00:
     print('\n',21*'{}===','\n{}'.format(colors['bluemarc'],colors['clean']))
     print('{} Sorry, but this financing is for people with a salary between US1.000,00 and US90.000,00. Leave your contact details and our consultants will contact you and indicate the ideal financing for you. Thanks!')
+#Calculo para comprometimento da renda
+    TrintaRenda = wage*(30/100)
 #Quantidade de parcelas
-installmentsinyears = int(input('How many years,  to uai'))u
+installmentsinyears = int(input('\n How many years, do you want to divide? '))
+if installmentsinyears > 31:
+    print('{}\n The maximum number of installments is 30. {}\n'.format(colors['red'],colors['clean']))
+elif installmentsinyears <= 1:
+    print('{}\n It is not possible to finance with this number! {} \n'.format(colors['red'], colors['clean']))
+else:
+    debt = value/(installmentsinyears*12)
+    print('\n O valor da sua dívida será {}\n'.format(debt))
+    
+    if TrintaRenda < debt:
+        print('\nThe amount for financing informed and the value of each installment exeed 30 of your salary :\n')
+    elif TrintaRenda > debt:
+        print('\n The period requested for financing was {} years.'.format(installmentsinyears))
+        print('\n Financing will be contracted for a period of {} installments per month.'.format(installmentsinyears*12))
+        print('\n The value of the installment will be U$ {}.\n'.format(debt))
