@@ -3,6 +3,7 @@ colors = {'blue':'\033[1;4;34m',
           'red':'\033[1;31m',
           'bluetext':'\033[7;1;44m',
           'bluemarc':'\033[1;34m',
+          'lilas':'\033[1;35m',
           'clean':'\033[m'}
 print('\n' , '   '*12 , '{} Financing Analysis {}'.format(colors['blue'], colors['clean']))
 #user data (dados do usuário)
@@ -33,15 +34,18 @@ else:
         elif installmentsinyears <= 1:
             print('{}\n It is not possible to finance with this number! {} \n'.format(colors['red'], colors['clean']))
         else:
-            print('\n O valor da sua dívida será {}\n mensais durante {} anos\n'.format(debt, installmentsinyears))
+            print('\n O valor da sua dívida será {:.2f}\n mensais durante {} anos\n'.format(debt, installmentsinyears))
 
-            print('Definindo se você terá direto ao financiamento de US {}'.format(value))
+            print('{}Definindo se você terá direto ao financiamento de US {:.2f}{}'.format(colors['bluemarc'],value,colors['clean']))
 
             if trintaporcrenda < debt:
                 print('\nThe amount for financing informed and the value of each installment exeed 30 porcent of your salary :\n')
                 print('{} Seu financiamento infelizmente ainda não será possivel, pois vai exceder os 30 porcento do seu salário, reconsidere aumentar o tempo de financiamento para não comprometer sua renda! {}\n'.format(colors['red'],colors['clean']))
             elif trintaporcrenda > debt:
-                print('\n The period requested for financing was {} years.'.format(installmentsinyears))
+                print('\n','==='*21)
+                print('{} The period requested for financing was {} years.'.format(colors['lilas'],installmentsinyears))
                 print('\n The financing will have a total of {} installments over {} years'.format(installmentsinyears*12,installmentsinyears))
-                print('\n The value of the installment will be U$ {}.\n'.format(debt))
+                print('\n The value of the installment will be U$ {:.2f}. {}'.format(debt,colors['clean']))
+                print('==='*21)
                 print('\n','  '*12 ,'{} Seu financiamento foi aprovado!! {}\n'.format(colors['bluetext'],colors['clean']))
+            
