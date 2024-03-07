@@ -28,9 +28,9 @@ else:
         #Quantidade de parcelas
         installmentsinyears = int(input('\n How many years, do you want to divide? '))
         #calculo
-        debt = value/(installmentsinyears*12)   
-        if installmentsinyears > 31:
-            print('{}\n The maximum number of installments is 30. {}\n'.format(colors['red'],colors['clean']))
+        debt = value/(installmentsinyears*12)
+        if installmentsinyears > 34:
+            print('{}\n The maximum number of installments is 34. {}\n'.format(colors['red'],colors['clean']))
         elif installmentsinyears <= 1:
             print('{}\n It is not possible to finance with this number! {} \n'.format(colors['red'], colors['clean']))
         else:
