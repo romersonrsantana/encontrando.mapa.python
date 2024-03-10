@@ -20,7 +20,7 @@ n2 = float(input('\n{} Second value:{} '.format(colors['yellow'],colors['clean']
 #comparando as informações
 
 if n1 > n2:
-    print('\n{} The first value entered is greater than the second value, {}that is {} > {}!!{}'.format(colors['greentext'],colors['greentext1'],n1,n2,colors['clean']))
+    print('\n{} The first value entered is greater than the second value, {}that is {} > {}!!{}\n'.format(colors['greentext'],colors['greentext1'],n1,n2,colors['clean']))
 elif n1 < n2:
     print('\n{} The second value enetered is greater than the first value, {}that is {} < {} !{}\n'.format(colors['yellowtext'],colors['yellowtext1'],n1,n2,colors['clean']))
 else:
