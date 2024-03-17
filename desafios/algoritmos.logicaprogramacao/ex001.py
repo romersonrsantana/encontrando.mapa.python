@@ -10,7 +10,7 @@ PM4 = 9
 PM5 = 5
 
 soma1 = PM1 + PM2
-soma2 = PM3 + PM5
+soma2 = PM3 + PM4
 
-if PM1 == PM3:
-    print('A Moeda falsa está na variavel PM4 ')
+if soma1 == soma2:
+    print('A Moeda falsa está na variavel PM5')
