@@ -1,4 +1,4 @@
-#colors palette
+#colors palete
 colors = {'blue':'\033[1;34m',
           'purple':'\033[1;35m',
           'green':'\033[1;32m',
@@ -32,7 +32,7 @@ else:
                         print('\n{}To be approved you need {}at least 6.1 points\n\n{}Your average was {}{:.2f}{}'.format(colors['gray'],colors['purple'],colors['gray'],colors['purple'],average,colors['clean']))
                         if average <= 3:
                               print('\n{}Failed student!{}\n'.format(colors['gray'],colors['clean']))
-                        elif average > 3 and average <= 6:
+                        elif average > 3 and average <= 6.9:
                               print('\n{}Recovery student!{}\n'.format(colors['gray'],colors['clean']))
                         else:
                               print('\n{}Approved student!!\n{}'.format(colors['green'],colors['clean']))
