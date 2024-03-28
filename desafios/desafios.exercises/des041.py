@@ -25,12 +25,12 @@ if years > currentyear or years < 1924:
     print('\n{}[ERRO]{} Rewrite the values with the correct year!{}\n'.format(colors['yellow'],colors['grey'],colors['clean']))
 else:
       if age >= 0 and age <= 9:
-            print('\n {}Your category is child!{}\n'.format(colors['grey'],colors['clean']))
+            print('\n{}You have {} years old! \nYour category is child!{}\n'.format(colors['grey'],age,colors['clean']))
       elif age > 9 and age <= 14:
-           print('\n {}Your category is children!{}\n'.format(colors['yellow'],colors['clean']))
+           print('\n{}You have {} years old!\nYour category is children!{}\n'.format(colors['yellow'],age,colors['clean']))
       elif age > 14 and age <= 19:
-           print('\n {}Your category is junior!{}\n'.format(colors['lightgreen'],colors['clean']))
+           print('\n{}You have {} years old!\nYour category is junior!{}\n'.format(colors['lightgreen'],age,colors['clean']))
       elif age > 19 and age <= 40:
-           print('\n {}Your category is senior!{}\n'.format(colors['purple'],colors['clean']))
+           print('\n{}You have {} years old! \nYour category is senior!{}\n'.format(colors['purple'],age,colors['clean']))
       else:
-           print('\n{}Your category is master!{}\n'.format(colors['blue'],colors['clean']))
+           print('\n{}You have {} years old! \nYour category is master!{}\n'.format(colors['blue'],age,colors['clean']))

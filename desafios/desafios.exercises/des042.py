@@ -1,0 +1,1 @@
+print('\nCondição de existência de um triângulo!\n\nInforme os valores de três retas e descubra se esses valores poderão formar um triângulo!\n')
