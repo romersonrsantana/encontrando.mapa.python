@@ -9,21 +9,21 @@ colors = {'blue':'\033[1;34m',
           'clean':'\033[m'}
 print('\n{}  Condition for the existence of a triangle  {}\n\n{}Enter {}3 values{} for {}3 lines{} and find out if these lines{} can form a triangle!{}\n'.format(colors['blupur'],colors['clean'],colors['blue'],colors['purple'],colors['blue'],colors['purple'],colors['blue'],colors['purple'],colors['clean']))
 #user data
-line1 = float(input('\n\n Straight1 ---> '))
-line2 = float(input('\n\n Straight2 ---> '))
-line3 = float(input('\n\n Straight3 ---> '))
+line1 = float(input('\n\n {}Straight1 --->{} '.format(colors['gray'],colors['green'])))
+line2 = float(input('\n\n {}Straight2 --->{} '.format(colors['gray'],colors['green'])))
+line3 = float(input('\n\n {}Straight3 --->{} '.format(colors['gray'],colors['green'])))
 #condition
 if(line1 + line2) > line3 and (line1 + line3) > line2 and (line2 + line3) > line1:
-    print('\n\nwith these stright lines, It is possible to form triangle!!\n')
+    print('\n\n{}with these stright lines, It is possible to form triangle!!{}\n'.format(colors['yellow'],colors['clean']))
     if line1 == line2 == line3:
-        print('\nThis is an equilateral:\n')
+        print('\n{}This is an {}equilateral:{}\n'.format(colors['gray'],colors['ligthgreen'],colors['clean']))
     elif line1 == line2 != line3:
-        print('\nThis is an isoceles triangle:')
+        print('\n{}This is an {}isoceles triangle!{}'.format(colors['gray'],colors['ligthgreen'],colors['clean']))
     elif line1 == line3 != line2:
-        print('\nThis is an Isosceles triangle:')
+        print('\n{}This is an{} Isosceles triangle! {}'.format(colors['gray'],colors['ligthgreen'],colors['clean']))
     elif line2 == line3 != line1:
-        print('This is an Isoceles trinangle \n\n')
+        print('{}This is an{} Isoceles trinangle!{}\n\n'.format(colors['gray'],colors['ligthgreen'],colors['clean']))
     elif line2 != line3 != line2:
-        print('\nThis is scalene!', '\n\nAll sides are different!\n\n\n')
+        print('\n{}This is{} scalene!{}'.format(colors['gray'],colors['ligthgreen'],colors['gray']), '\n\nAll sides are different!{}\n\n\n'.format(colors['clean']))
 else:
-    print('\nIt is not possible to form a triangle\n')
+    print('\n{} [ERRO] {}It is not possible to form a triangle!! {}\n'.format(colors['yellow'],colors['gray'],colors['clean']))
