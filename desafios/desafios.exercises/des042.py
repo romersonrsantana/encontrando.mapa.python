@@ -1,5 +1,13 @@
 #colors palette
-print('\nCondition for the existence of a triangle\n\nEnter 3 values for 3 lines and find out if these lines can form a triangle!\n')
+colors = {'blue':'\033[1;34m',
+          'purple':'\033[1;35m',
+          'blupur':'\033[1;34;45m',
+          'green':'\033[1;32m',
+          'yellow':'\033[1;33m',
+          'ligthgreen':'\033[1;36m',
+          'gray':'\033[1;37m',
+          'clean':'\033[m'}
+print('\n{}  Condition for the existence of a triangle  {}\n\n{}Enter {}3 values{} for {}3 lines{} and find out if these lines{} can form a triangle!{}\n'.format(colors['blupur'],colors['clean'],colors['blue'],colors['purple'],colors['blue'],colors['purple'],colors['blue'],colors['purple'],colors['clean']))
 #user data
 line1 = float(input('\n\n Straight1 ---> '))
 line2 = float(input('\n\n Straight2 ---> '))
