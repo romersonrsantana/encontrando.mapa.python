@@ -11,5 +11,6 @@ else:
         BodyMass = weight/(height**2)
         if BodyMass < 18.5:
             print("\nYour body mass index {:.2f}\nYou're underweight".format(BodyMass))
-        elif BodyMass >= 18.5 and BodyMass <= 25:
-            print('')
+        elif BodyMass >= 18.5 and BodyMass < 25:
+            print('Your weight is ideal')
+            elif BodyMass >= 25 and 
