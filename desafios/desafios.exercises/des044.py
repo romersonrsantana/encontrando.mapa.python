@@ -28,5 +28,9 @@ else:
                 print('\nYou will not receive discount with this payment method.\n\n The product it costs U$ {}.\n\n In 2x installments you will pay a total of {}\n'.format(value,value/2))
         elif choice == 4:
             print('You can split it up to 10x with 20\\%\\ interest!\n')
-            
+            option = int(input('\nHow many time do you want to divide? '))
+            if option < 3 or option > 10:
+                print('\n Reconsider your options, here you can split your purchases 3x to 10x times \n')
+            else:
+                print('\n Your purchases worth a total of U$ {}, will be divided into {} installments.\n Each installment will be worth {} with interest.\n'.format(value,option,(value+(value*0.2))/option))
         
