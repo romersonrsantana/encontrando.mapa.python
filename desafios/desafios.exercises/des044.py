@@ -27,22 +27,21 @@ else:
         print('\n{}     [ERRO] Enter a valid number     {}\n'.format(colors['red'],colors['clean']))
     else:
         if choice == 1:
-            print('\n {}With this payment method you will have a 20\%\ discount. \n\n The product it costs {} U$ {} {} \n\n In this form of payment, the discount will be {} U$ {} {}\n\n Amount {} U$ {} {}\n'.format(colors['clean'],colors['purple'],value,colors['clean'],colors['green'], (value*0.20),colors['clean'], colors['blue'], value-(value*0.2), colors['clean']))
+            print('\n {}With this payment method you will have a 20\%\ discount. \n\n The product it costs {} U$ {:.2f} {} \n\n In this form of payment, the discount will be {} U$ {:.2f} {}\n\n Amount {} U$ {:.2f} {}\n'.format(colors['clean'],colors['purple'],value,colors['clean'],colors['green'], (value*0.20),colors['clean'], colors['blue'], value-(value*0.2), colors['clean']))
         elif choice == 2:
-            print('\n {}With this payment method you will have a 5\\%\\ discount. \n\n The product it costs {} U$ {}{}. \n\n In this form of payment, the discount will de {} U$ {}{}.\n\n Amount {} U$ {} {} \n'.format(colors['clean'],colors['purple'],value,colors['clean'],colors['green'],(value*0.05),colors['clean'],colors['blue'],value-(value*0.05),colors['clean']))
+            print('\n {}With this payment method you will have a 5\\%\\ discount. \n\n The product it costs {} U$ {:.2f}{}. \n\n In this form of payment, the discount will de {} U$ {:.2f}{}.\n\n Amount {} U$ {:.2f} {} \n'.format(colors['clean'],colors['purple'],value,colors['clean'],colors['green'],(value*0.05),colors['clean'],colors['blue'],value-(value*0.05),colors['clean']))
         elif choice == 3:
-            installments = int(input('\n {}You want to divid the amount in 2x?\n\n {}1-yes{} \n\n {}2-No. Only 1x on credit card.{} \n\n --> {}'.format(colors['yellow'],colors['gray'],colors['clean'],colors['lightgreen'],colors['clean'],colors['gray'])))
+            installments = int(input('\n {}You want to divid the amount in 2x?\n\n {}1-No. Only 1x on credit card{} \n\n {}2-Yes. 2x on credit card.{} \n\n --> {}'.format(colors['yellow'],colors['gray'],colors['clean'],colors['lightgreen'],colors['clean'],colors['gray'])))
             if installments < 1 or installments > 2:
                 print('{}[ERRO] Write a valid value!{}'.format(colors['red'],colors['clean']))
             elif installments == 1:
-                print('\n {}You will not receive discount with this payment method.\n\n The product it costs {}U$ {}{}. \n'.format(colors['blue'],colors['purple'],value,colors['clean']))
+                print('\n {}You will not receive discount with this payment method.\n\n The product it costs {}U$ {:.2f}{}. \n'.format(colors['blue'],colors['purple'],value,colors['clean']))
             elif installments == 2:
-                print('\n You will not receive discount with this payment method.\n\n The product it costs {}U$ {}.\n\n {}In {} 2x installments {}you will pay a total of {}U$ {}{}.{}\n'.format(colors['green'],value,colors['gray'],colors['purple'],colors['gray'],colors['blue'],value/2,colors['gray'],colors['clean']))
+                print('\n You will not receive discount with this payment method.\n\n The product it costs {}U$ {:.2f}.\n\n {}In {} 2x installments {}you will pay a total of {}U$ {:.2f}{}.{}\n'.format(colors['green'],value,colors['gray'],colors['purple'],colors['gray'],colors['blue'],value/2,colors['gray'],colors['clean']))
         elif choice == 4:
             print('\n {}You can split it up to 10x with 20\\%\\ interest!\n'.format(colors['clean']))
             option = int(input('\nHow many time do you want to divide?{} '.format(colors['green'])))
             if option < 3 or option > 10:
                 print('\n {}Reconsider your options, here you can split your purchases {}3x {}to {}10x {}times.{} \n'.format(colors['gray'],colors['yellow'],colors['gray'],colors['yellow'],colors['gray'],colors['clean']))
             else:
-                print('\n {}Your purchases worth a total of {}U$ {}{}, will be divided into {}{} installments{}.\n Each installment will be worth {}U$ {} with interest{}.\n'.format(colors['clean'],colors['green'],value,colors['clean'],colors['purple'],option,colors['clean'],colors['blue'],(value+(value*0.2))/option,colors['clean']))
-        
+                print('\n {}Your purchases worth a total of {}U$ {:.2f}{}, will be divided into {}{} installments{}.\n Each installment will be worth {}U$ {:.2f} with interest{}.\n\n Amount U$ {:.2f} \n'.format(colors['clean'],colors['green'],value,colors['clean'],colors['purple'],option,colors['clean'],colors['blue'],(value+(value*0.2))/option,colors['clean'],value+(value*0.2)))
