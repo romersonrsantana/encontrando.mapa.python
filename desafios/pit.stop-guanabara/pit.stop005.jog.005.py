@@ -43,7 +43,6 @@ if jogador >= 0 and jogador <= 2:
             print('\nvocê perdeu!!\n')
         elif jogador == 2:
             print('\nEmpatou!!\n')
-            
 else:
     print('\nInforme uma opção correta\n')
 
