@@ -12,17 +12,24 @@ for corrida in range(6):
     if jogador == num:
         print('\nO computador escolheu {} e você escolheu {}\n'.format(num,jogador))
         print('\nPonto pra você!\n')
-        s = 0
-        for c in range(6):
-            s = s + jogador
-            print(s)
+        x = 0
+        for x in range(0, 9, 1):
+            x = x + 1
+            if x == 4:
+                print("Você venceu")
+                break
+        print('\n {}'.format(x))
     else:
         print('\nO computador escolheu {} e você escolheu {}\n'.format(num,jogador))
         print('\nPonto para o computador!!\n')
-        comp = 0
-        for a in range(0,6):
-            a = a + num
+        y = 0
+        for y in range(0, 9):
+            y = y + 1
+            if y == 4:
+                print("O computador venceu")
+                break
+        print('\n {}'.format(y))
     
 print()
-print('Total de acertos jogador {}'.format(s))
-print('Total de acertos computador {}\n'.format(a))
+print('Total de acertos jogador {}'.format(x))
+print('Total de acertos computador {}\n'.format(y))
