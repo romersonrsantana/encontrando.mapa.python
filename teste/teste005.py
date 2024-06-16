@@ -1,4 +1,5 @@
 import random
+import emoji
 print('\nCorrida Maluca\n')
 soma = 0
 somcomp = 0
@@ -13,10 +14,14 @@ for corrida in range(6):
     if jogador == num:
         print('\nO computador escolheu {} e você escolheu {}\n'.format(num,jogador))
         print('\nPonto pra você!\n')
+        print(' '*27,emoji.emojize("🚔"))
+        print()
         soma = soma + 1
     else:
         print('\nO computador escolheu {} e você escolheu {}\n'.format(num,jogador))
         print('\nPonto para o computador!!\n')
+        print(' '*27, emoji.emojize("🚘"))
+        print()
         somcomp = somcomp + 1
     
 print()
