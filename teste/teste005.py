@@ -1,6 +1,6 @@
 import random
 import emoji
-from time import sleep
+from ti1me import sleep
 
 #color palete
 color = {'blue':'\033[1;7;29;44m',
