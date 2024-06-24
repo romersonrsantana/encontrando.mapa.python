@@ -22,4 +22,4 @@ twentieth = first + reason*9
 for c in range(first, twentieth + 1, reason):
     print(c,'-', end=' ')
 print()
-print('\n',' '*18,'{}  Progressão Aritmética concluida com sucesso!!  2{}\n'.format(color['blue'],color['clean']))
+print('\n',' '*18,'{}  Progressão Aritmética concluida com sucesso!!  {}\n'.format(color['blue'],color['clean']))
