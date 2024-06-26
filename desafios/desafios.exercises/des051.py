@@ -8,7 +8,6 @@ color = {'blue':'\033[1;29;44m',
          'clean':'\033[m'}
 
 print('\n',' '*27,'{} Progressão Aritmética {}'.format(color['purple'], color['clean']))
-022
 first = int(input('\n{}Digite um número inteiro que será o primeiro termo de uma P.A: ---> {}  '.format(color['gray'],color['blue'])))
 
 reason = int(input('\n{}{}Informe um {}número inteiro{} que será a razão da P.A ---> {}  '.format(color['clean'],color['gray'], color['green'], color['gray'], color['blue'])))
