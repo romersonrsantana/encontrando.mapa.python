@@ -1,6 +1,7 @@
 #bibliotecas
 import emoji
 from time import sleep
+from datetime import date
 
 #palete color
 color = {'blue':'',
@@ -33,8 +34,11 @@ while True:
     installment = float(input('\nInforme a quantidade de parcelas que deseja: ---> '))
     cond = amont/installment    #parcelas informadas cliente
     porcentagem = amont*0.02    #2%
-    if porcentagem < cond:
+    if porcentagem <= cond:
         break
     else:
         print('\nO valor mínimo de cada parcela deverá ser de 2% do valor do veículo.\nOs dados informados correspondem a uma parcela de R$ {}, \nmenos de 2% do valor total de R${}. \nConsidere parcelas acima de R$ {}'.format(cond, amont, amont*0.02))
-print('Fim')
+#Total de parcelas
+quantidade_de_parcelas = (installment/12)
+ano = date.today().year
+print('\nConsiderando o total de parcelas informado de {} seu financiamento será quitado no ano de {}\n'.format(installment, ano + quantidade_de_parcelas))
