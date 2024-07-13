@@ -1,4 +1,9 @@
-print('\nInforme os dados para cadastro\n')
+color = {'blue':'\033[1;34m', 
+         'purple':'\033[1;35m',
+         'gray':'\033[1;37m',
+         'clean':'\033[m'}
+
+print('\n',' '*27,'{}Informe os dados para cadastro{}\n'.format(color['purple'], color['clean']))
 
 mulhere_menos_20anos = 0
 nome_mais_velho = 0
@@ -7,28 +12,30 @@ maior_idade = 0
 
 for dados in range(1, 5):
 
-    nome = str(input('\nInforme o nome do {}º cliente: --> '.format(dados)))
+    nome = str(input('\nInforme o nome do {}º cliente: -->{} '.format(dados, color['blue'])))
+    print(f'{color["clean"]}')
 
     while True:
         try:
-            idade = int(input('\nQual a idade do {}º cliente: --> '.format(dados)))
+            idade = int(input('\nQual a idade do {}º cliente:{} --> '.format(dados,color['blue'])))
+            print(f'{color["clean"]}')
             if idade >= 18 and idade <= 97:
                 break
             else:
                 print('\nInforme uma idade válida entre 18 e 97 anos\n')
         except ValueError:
-            print('\nVocê não digitou caracteres númericos.\n\n [Alert!] Verifique o valor novamente.\n')
+            print(f'\nVocê não digitou caracteres númericos.\n\n {color["gray"]}[Alert!]{color["clean"]} Verifique o valor novamente.\n')
             continue
     
     while True:
-        sexo = str(input(f'\nDigite o sexo do {dados}º cliente, se é masculino ou feminino: ---> ')).upper().strip()
-        print()
+        sexo = str(input(f'\nDigite o sexo do {dados}º cliente, se é masculino ou feminino: --->{color["blue"]} ')).upper().strip()
+        print(f'{color["clean"]}')
         if sexo == 'MASCULINO':
             break
         elif sexo == 'FEMININO':
             break
         else:
-            print(f'\n[ALERT!] Você não informou corretamente o sexo do {dados}º cliente.\n')
+            print(f'\n{color["gray"]}[ALERT!]{color["clean"]} Você não informou corretamente o sexo do {dados}º cliente.\n')
 
     if dados == 1:
         dados_cliente1 = {'cliente1': nome,'idade': idade, 'sexo': sexo}
@@ -53,9 +60,9 @@ for dados in range(1, 5):
     if sexo == 'FEMININO'and idade < 20:
         mulhere_menos_20anos += 1
 
-print(f'\nDados armazenados com sucesso!\n\n--> {dados_cliente1} \n--> {dados_cliente2} \n--> {dados_cliente3}\n--> {dados_cliente4}\n')
+print(f'\n{color["purple"]}Dados armazenados com sucesso!{color["clean"]}\n\n--> {dados_cliente1} \n--> {dados_cliente2} \n--> {dados_cliente3}\n--> {dados_cliente4}\n')
 
-print(f'\nO homem mais velho:\n --> {nome_mais_velho} com {maior_idade} anos de idade.\n')
+print(f'\nO homem mais velho:\n\n --> {color["blue"]}{nome_mais_velho}{color["clean"]} com {maior_idade} anos de idade.\n')
 
-print(f'\nDos dados armazenados de mulheres com menos de 20 anos de idade:\n --> {mulhere_menos_20anos} com menos de 20 anos.\n')
+print(f'\nDos dados armazenados de mulheres com menos de 20 anos de idade:\n\n --> {color["purple"]}{mulhere_menos_20anos} com menos de 20 anos{color["clean"]}.\n')
 #Louvado Seja Nosso Senhor Jesus Cristo. Para Sempre Seja Louvado. Amém.
