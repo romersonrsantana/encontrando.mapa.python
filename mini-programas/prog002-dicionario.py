@@ -1,3 +1,7 @@
+import re
+#busca_com_espaco = re.compile("[\s]")
+#busca = 0 --> Entender REGEX - Problema: --> Aceitar caracteres com espaço.
+
 color = {'blue':'\033[1;34m', 
          'purple':'\033[1;35m',
          'gray':'\033[1;37m',
@@ -8,13 +12,25 @@ print('\n',' '*27,'{}Informe os dados para cadastro{}\n'.format(color['purple'],
 mulhere_menos_20anos = 0
 nome_mais_velho = 0
 maior_idade = 0
-
+teste_string_vazia = ('aeiou')
 
 for dados in range(1, 5):
 
-    nome = str(input('\nInforme o nome do {}º cliente: -->{} '.format(dados, color['blue'])))
-    print(f'{color["clean"]}')
+    while True:
 
+        nome = str(input('\nInforme o nome do {}º cliente: -->{} '.format(dados, color['blue']))).strip().title()
+        print(f'{color["clean"]}')
+        
+        #A string foi fatiada e em seguida será feito um teste de verificação para saber se foi digitado apenas letras.
+
+        teste = nome[:2]
+        test = teste.isalpha()
+
+        if test == True:
+            break
+        else:
+            print(f'\n{color["gray"]}Insira um nome válido{color["clean"]}\n')
+    
     while True:
         try:
             idade = int(input('\nQual a idade do {}º cliente:{} --> '.format(dados,color['blue'])))
