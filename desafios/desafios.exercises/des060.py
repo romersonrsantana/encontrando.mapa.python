@@ -1,9 +1,23 @@
-print('\nDiscovering the factorial\n')
+colors = {'blue':'\033[1;34m',
+          'purple':'\033[1;35m',
+          'alert':'\033[1;31m',
+          'green':'\033[1;32m',
+          'yellow':'\033[1;33m',
+          'gray':'\033[1;37m',
+          'clean':'\033[m'}
+
+print('\n',' '*27,'{}Discovering the factorial{}\n'.format(colors['purple'], colors['clean']))
 
 factorial = 3
 
-usuario = float(input('\nIndique um número para iniciar: --> '))
-print()
+while True:
+    try:
+        usuario = float(input('\n{}Indique um número para iniciar: -->{}  '.format(colors['blue'], colors['gray'])))
+        print('{}'.format(colors['clean']))
+        break
+    except:
+        print('\n{}[ALERT]{} Insira valores válidos{}'.format(colors['alert'], colors['gray'], colors['clean']))
+        continue
 
 inicio = usuario
 
@@ -29,6 +43,6 @@ while factorial > 1:
     
     usuario = usuario - 1
 
-print(total)
+print(f'{colors["purple"]}',total,f'{colors["clean"]}')
 print('\n')
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés. Toda Honra e Toda Glória Ao Espirito Santo. Toda Honra e Toda Glória a Jesus Cristo. Amém. 
