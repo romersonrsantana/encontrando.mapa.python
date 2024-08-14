@@ -1,8 +1,16 @@
+colors = {'Purple':'\033[m',
+          'Blue':'\033[m',
+          'Yellow':'\033[m',
+          'Green':'\033[m',
+          'Alert':'\033[m',
+          'Gray':'\033[m',
+          'Clean':'\033[m'}
+
 controlador = 0
 numero_termos = 11
 total = 0
 
-print()
+print('\n',' '*27,'Desenvolvendo uma Progressão Aritmética\n')
 
 # ------------ Informações iniciais ---------------
 
@@ -23,13 +31,14 @@ while controlador < numero_termos:
         print('\nTermo', f'{controlador} -->',total)
 
     elif controlador == numero_termos:
-        controlador = 0
-        continuacao_termos = int(input('\n\nDeseja saber mais termos? \n(informe mais quantos termos deseja saber) \n\n---> '))
+        
+        continuacao_termos = int(input('\n\nDeseja saber mais termos? \n(informe mais quantos termos deseja saber ou informe zero para encerrar) \n\n---> '))
 
-        if continuacao_termos == 0:
+        if continuacao_termos == 0: #condição que permite sair do laço caso o usuário digite 0.
             numero_termos = 0
-        else:
-            numero_termos += continuacao_termos
+
+        else: #condição que aumenta o número de termos e ele deixa de ser igual ao controlador.
+            numero_termos += continuacao_termos + 1      
     
     else:
         total += razao_pa
@@ -37,41 +46,4 @@ while controlador < numero_termos:
 
 print('\n\nFim!\n\n')
 
-
-'''while controlador < numero_termos and numero_termos != 0:
-
-    controlador += 1
-
-    if controlador == 1:
-        total = n
-        print(total)
-
-    elif controlador == numero_termos:
-        continuacao_termos = int(input('Deseja saber mais termos?'))
-
-        controlador = 0
-        numero_termos = continuacao_termos
-
-        while controlador < continuacao_termos:
-            
-            controlador += 1
-            
-           
-
-            if continuacao_termos != 0:
-                total += r
-                print(total)
-                
-            elif continuacao_termos == controlador:  
-                continuacao_termos = int(input('Deseja saber mais termos --> '))
-            
-            #else:
-                #print('\n\nFim!!\n\n') 
-                continuacao_termos = int(input('Deseja saber mais termos --> '))
-
-    else:
-        total += r
-        print(total)'''
-    
-    
-
+#Louvado Seja Nosso Senhor Jesus Cristo. Para Sempre Seja Louvado. Amém.
