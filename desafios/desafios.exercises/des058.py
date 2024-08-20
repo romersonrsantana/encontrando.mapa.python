@@ -26,11 +26,20 @@ while escolhido_computador != escolhido_jogador:
     try:
         escolhido_jogador = int(input(f'\nEscolha um número entre 0 e 10: -->{color_palet["blue"]} '))
         print(f'{color_palet["clean"]}')
+        
+        if escolhido_computador > escolhido_jogador:
+            print('\nTente um número MAIOR!\n')
+        elif escolhido_computador < escolhido_jogador:
+            print('\nTente um número MENOR!\n')
+
     except:
         print('\n',' '*18,'{}[Alert!]{} O valor digitado não é válido!\n\n'.format(color_palet['alert'],color_palet['grey']),' '*18,'  Tente valores entre 0 e 10!!\n{}'.format(color_palet['clean']))
         continue
+    
     if escolhido_jogador < 0 or escolhido_jogador > 10:
         print('\n',' '*18,'{}[Alert!]{} Escolha um número válido entre 0 e 10.{}'.format(color_palet['alert'],color_palet['grey'],color_palet['clean']))
+
+        
     elif escolhido_jogador == escolhido_computador:
         print('\n',' '*27,'{}Parabéns você acertou!{}'.format(color_palet['yellow'],color_palet['clean']))   
     
