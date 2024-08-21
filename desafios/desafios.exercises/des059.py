@@ -30,9 +30,6 @@ while True:
 
 while escolha_usuario != 5:
     print(f'''
-        Primeiro valor --> {colors["purple"]}{primeira_escolha}{colors["clean"]}
-        Segundo valor --> {colors["purple"]}{segunda_escolha}{colors["clean"]}
-
         [1] Somar
         [2] Multiplicar
         [3] Maior
