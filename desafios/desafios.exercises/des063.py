@@ -14,7 +14,7 @@ while contador < proxima_sequencia:
     
     if contador == 1:
         anterior = 1
-        print(anterior, end = ' -> ')
+        print(0, ' --> ',anterior, end = ' -> ')
     
     elif contador == 2:
         anterior_2 = 1
@@ -31,8 +31,3 @@ while contador < proxima_sequencia:
         anterior_3 = total
 
 #Louvado Seja Nosso Senhor Jesus Cristo. Para Sempre Seja Louvado. Amém. Obrigado Jesus!!! Não sou Nada sem Ti. Amém.
-
-    
-
-
-
