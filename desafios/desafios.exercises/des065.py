@@ -5,6 +5,7 @@ contador = 0
 total = 0
 maior = 0
 menor = 0
+media = 0
 
 while controle != 'n':
 
@@ -13,18 +14,13 @@ while controle != 'n':
     number = int(input('\nInforme um número --> '))
         
     if contador == 1:
-        first_term = number
-        media = 0
-        maior = 0
-        menor = 0
-    
-    else:
-        if first_term < number:
-            maior = number
-            menor = first_term
+        maior = menor = first_term = number
 
-        elif first_term > number:
-            maior = first_term
+    else:
+        if maior < number:
+            maior = number
+
+        elif maior > number:
             menor = number
     
         media += number
