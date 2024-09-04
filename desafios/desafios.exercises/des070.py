@@ -24,8 +24,8 @@ while boolean != True:
         try:
             price = float(input(f'\nInform the price of the {control}st product: u$ '))
 
-            if price <= 0 or price > 100000.00:
-                print("\nThis value isn't accepted.\n")
+            if price <= 1 or price > 71000:
+                print("\nThis value isn't accepted.\n\nAllowed values between U$ 1 and U$ 71000")
             
             else:
                 break
@@ -58,8 +58,8 @@ while boolean != True:
         else:
             print("\n[Alert] Unidentified answers ('y' to yes or 'n' to not)\n")
 
-print(f'\nTotal expenses US {total}.\n')
-print(f'\n{sum_of_products} products above US 1.000 were identified.')
-print(f'\nThe cheapest product was: --> {lowest_priced_product}\n')
+print(f'\n>>> Total expenses US {total}.\n')
+print(f'\n>>> {sum_of_products} products above US 1.000 were identified.')
+print(f'\n>>> The cheapest product was: --> {lowest_priced_product}\n')
             
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés. Toda Honra e Toda Glória Ao Espiríto Santo. Toda Honra e Toda Glória A Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo. Para Sempre Seja Louvado. Amém.
