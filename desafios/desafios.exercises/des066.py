@@ -14,5 +14,5 @@ while True:
 
     loop_sum += 1
 
-print(f'\nThe sum of the numbers is {total}.\n\nReported quantity {loop_sum}.\n')
+print(f'\nThe sum of the numbers is {total:^18}.\n\nReported quantity {loop_sum :->6}.\n')
 

@@ -7,7 +7,7 @@ inteiro = resto = resto2 = troco = resto3 = troco2 = resto4 = 0
 boolean = False
 
 while boolean != True:
-    sake = int(input('\nWhat amount do you want to withdraw?\n\n--> '))
+    sake = int(input('\nWhat amount do you want to withdraw?\n\n--> U$ '))
 
     while True:
         if sake > 50:
@@ -36,9 +36,9 @@ while boolean != True:
                         break
     print('---'*7 + ' Quantity of banknotes for whithdrawal ' + '---'*7)
     print(f'\nNota de R$ 50,00 --> {inteiro}.')
-    print(f'\nNota de R$ 20,00 --> {resto2}.')
-    print(f'\nNota de R$ 10,00 --> {resto3}.')
-    print(f'\nNota de R$ 1,00 --> {resto4}.\n')
+    print(f'Nota de R$ 20,00 --> {resto2}.')
+    print(f'Nota de R$ 10,00 --> {resto3}.')
+    print(f'Nota de R$ 1,00 --> {resto4}.\n')
     print('---'*27)
 
     while True:

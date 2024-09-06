@@ -41,6 +41,10 @@ while True:
 
     print(f'\nThe computer chose the number: --> {computer}.\n\nYou chose the number: --> {choice_player}.')
 
+    print('\nDeu par!\n' if sum % 2 == 0 else '\nDeu impar!\n')
+
+    print(f'\n--> Total {sum:^18}\n')
+
     if sum % 2 == 0 and player == 2:
         print('\nThe result is par!\n\nCongratulations!!\n')
     elif sum % 2 != 0 and player == 1:

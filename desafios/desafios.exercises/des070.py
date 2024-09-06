@@ -72,7 +72,7 @@ while boolean != True:
             print("\n[Alert] Unidentified answers ('y' to yes or 'n' to not)\n")
             print('==='*27)
 print('---'*27)
-print(f'\n>>> Total expenses US {total}.\n')
+print(f'\n>>> Total expenses US {total:.2f}.\n')
 print(f'\n>>> {sum_of_products} products above US 1.000 were identified.')
 print(f'\n>>> The cheapest product was: --> {lowest_priced_product}\n')
 print('---'*27)
