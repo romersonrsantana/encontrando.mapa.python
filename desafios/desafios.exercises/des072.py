@@ -6,8 +6,9 @@ print('####'*18,'\n')
 numbers = ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty')
 
 choice = control = next =  0
+boolean = False
 
-while True:
+while boolean != True:
     print('---'*27)
     
     try:
@@ -23,11 +24,15 @@ while True:
         print(f'\nThe number provided corresponds to:\n\n>>> {choice} --> {numbers[choice]}')
 
         control += 1
-    
-    next = str(input('\nDo you want inter a number?\n\n[y] yes or [n] no.\n\n>>> ')).lower()[0]
 
-    if next == 'n':
-        break
+    while True:
+        next = str(input('\nDo you want inter a number?\n\n[y] yes or [n] no.\n\n>>> ')).lower()[0]
+
+        if next == 'n':
+            boolean = True
+            break
+        elif next == 'y':
+            break
 
 print(f'\nProgram completed successfully!\n\nTotal numbers reported {control:^20}\n')
     
