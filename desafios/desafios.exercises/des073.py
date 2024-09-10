@@ -32,7 +32,7 @@ while True:
         print()
         print('The top five in the table are: ')
         print('---'*27)
-        print(position[:6])
+        print(position[:5])
 
     elif choice == 2:
         print()
