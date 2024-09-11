@@ -3,10 +3,10 @@ print('¨¨¨¨==='*9)
 print(' '*27,'Reading values')
 print('======='*9)
 
-test1 = int(input('\nEnter the first number --> '))
-test2 = int(input('\nEnter the second number --> '))
-test3 = int(input('\nEnter the third number --> '))
-test4 = int(input('\nEnter the fourth number --> '))
+test1 = (int(input('\nEnter the first number --> ')))
+test2 = (int(input('\nEnter the second number --> ')))
+test3 = (int(input('\nEnter the third number --> ')))
+test4 = (int(input('\nEnter the fourth number --> ')))
 
 total = ''
 
@@ -14,7 +14,7 @@ test = (test1, test2, test3, test4)
 
 for c in range(len(test)):
     if test[c] == 3:
-        repeat = test.index(3)
+        repeat = test.index(3) + 1
         break
     else:
         repeat = " Didn't appear once "
