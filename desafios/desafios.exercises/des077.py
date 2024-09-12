@@ -12,7 +12,7 @@ for c in words:
     if 'a' in c:
         print('a ', end='')
     if 'e' in c:
-        print('e ', end='')
+       print('e ', end='')
     if 'i' in c:
         print('i ', end='')
     if 'o' in c:
