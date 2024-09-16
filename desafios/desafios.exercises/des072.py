@@ -3,7 +3,8 @@ print('####'*18)
 print(' '*27,'Writing a number')
 print('####'*18,'\n')
 
-numbers = ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty')
+numbers = ('zero', 'one', 'two', 'three', 'four',
+              'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty')
 
 choice = control = next =  0
 boolean = False
