@@ -4,6 +4,10 @@ print('==='*27)
 
 position = ('Botafogo', 'Fortaleza', 'Palmeiras', 'Flamengo', 'Cruzeiro', 'São Paulo', 'Bahia', 'Vasco da Gama', 'Atlético-MG', 'Internacional', 'Bragantino', 'Atletico-PR', 'Juventude', 'Criciúma', 'Grêmio', 'Fluminense', 'Corinthians', 'EC Vitória', 'Cuiabá', 'Atlético-GO')
 
+control = 0
+
+for time in range(len(position)):
+    print(f'{time + 1:.>9}º - {position[time]}')
 your_team = 0
 
 while True:
@@ -32,7 +36,9 @@ while True:
         print()
         print('The top five in the table are: ')
         print('---'*27)
-        print(position[:5])
+        for c in range(len(position[:5])):
+            print(f'{c + 1}º - {position[c]}, ', end='')
+        print()
 
     elif choice == 2:
         print()
@@ -44,7 +50,29 @@ while True:
         print()
         print('The teams in alphabetical order are: ')
         print('---'*27)
-        print(sorted(position))
+        for time in sorted(position):
+            control += 1
+            if control < 4:
+                print(f'{time}, ', end='')
+            elif control == 4:
+                print(f'{time}')
+            elif control < 8:
+                print(f'{time}, ', end='')
+            elif control == 8:
+                print(f'{time}')
+            elif control <12:
+                print(f'{time}, ', end='')
+            elif control == 12:
+                print(f'{time}')
+            elif control < 16:
+                print(f'{time}, ', end='')
+            elif control == 16:
+                print(f'{time}')
+            elif control < 20:
+                print(f'{time}, ', end='')
+            else:
+                print(f'{time}. ')
+                print()
     
     elif choice == 4:
          
