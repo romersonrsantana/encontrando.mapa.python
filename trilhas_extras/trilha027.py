@@ -9,7 +9,11 @@ value = 0
 def control(control_list):
     for c in range(len(spam)):
         if c == 5:
-            print('')
+            print(f' {spam[c]}.')
+        elif c == 4:
+            print(f'{spam[c]} and', end='')
+        else:
+            print(f'{spam[c]}, ', end='')
 
 
 for c in range(0, 6):
@@ -24,7 +28,12 @@ for c in range(0, 6):
     spam = spam + [value]
 
     accountant += 1
-
-print(spam)
+    
+print()
+print('---'*27)
+print('--> ', end='')
+control(spam)
+print('---'*27)
+print()
 
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés, Ao Seu Espírito Santo e Ao Seu Filho Amado Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo, Para Sempre Seja Louvado. Amém.
