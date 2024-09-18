@@ -9,6 +9,7 @@ test3 = (int(input('\nEnter the third number --> ')))
 test4 = (int(input('\nEnter the fourth number --> ')))
 
 total = ''
+control = 0
 
 test = (test1, test2, test3, test4)
 
@@ -34,6 +35,11 @@ print('==='*27)
 for c in range(len(test)):
     if test[c] % 2 == 0:
         print(f'{test[c]} ', end='')
+
+        control += 1
+
+if control == 0:
+    print('\nNo even numbers were entered.\n')
 
 print(f'\n',' '*27,'Program completed successfully!\n')
 

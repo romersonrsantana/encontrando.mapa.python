@@ -6,9 +6,9 @@ print(' '*27,'Generating random numbers in tuples')
 choise = (random.randint(1, 16), random.randint(1, 28), random.randint(1, 34), random.randint(1, 37), random.randint(1, 111))
 
 for c in range(len(choise)):
-    if c == 0:
-        smaller = choise[c]
-        biggest = choise[c]
+    if c == 0:  
+        smaller = choise[c] #print(min(choise))
+        biggest = choise[c] #print(max(choise))
     else:
         if choise[c] < smaller:
             smaller = choise[c]
