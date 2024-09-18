@@ -8,6 +8,8 @@ test2 = (int(input('\nEnter the second number --> ')))
 test3 = (int(input('\nEnter the third number --> ')))
 test4 = (int(input('\nEnter the fourth number --> ')))
 
+#test( int(input('\nEnter the first number --> ')), int(input('\nEnter the second number --> ')), int(input('\nEnter the third number --> ')), int(input('\nEnter the fourth number --> '))  )
+
 total = ''
 control = 0
 
