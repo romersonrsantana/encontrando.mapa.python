@@ -58,9 +58,11 @@ basis()
 #informações analisadas
 
 print(f'--> Max: {max}, Posições {pos_max}... ', end='')
+
 if equal_max > 1:
-    for c in position:
-        print(c,'...' , end='')
+    for c, d in enumerate(numbers):
+        if max in numbers:
+            print(numbers[c],'...' , end='')
 
     print(f'--> There are {equal_max} equal maximum values in the list.\n')
 
