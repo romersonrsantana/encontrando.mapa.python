@@ -40,5 +40,4 @@ while boolean != True:
 print('\nlista informada em ordem crescente: ',sorted(numbers_list))
 print()
     
-
 #te Amo Papai do Céu Deus de Abraão, Isaac, Jacó, Israel e Moisés, te Amo Espírito Santo, te Amo Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo, Para Sempre Seja Louvado. Amém.
