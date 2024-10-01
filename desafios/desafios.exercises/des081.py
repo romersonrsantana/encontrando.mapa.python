@@ -61,12 +61,15 @@ while boolean != True:
 #----------- start conclusion of the reported data -------------
 art()
 print('Values inserted into the list according to the insertion order: \n--> ',list_numbers)
+
 art()
 print(f'--> Total of the numbers {control}')
+
 art()
 print(f'--> Numbers in descending order ', end='')
 list_numbers.sort(reverse=True)
 print(list_numbers)
+
 art()
 if 5 in list_numbers:
     print('--> Há o número 5 na lista, a primeira incidencia acontece na posição ', end='')
@@ -74,7 +77,6 @@ if 5 in list_numbers:
 else:
     print('--> Não foi encontrado o valor 5 na lista.')
 art()
-print()
 
 #----------------- end conclusion of the reported data --------
 
