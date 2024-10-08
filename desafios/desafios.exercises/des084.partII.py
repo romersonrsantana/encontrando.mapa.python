@@ -46,8 +46,14 @@ for indice, valor in enumerate(registered_people):
             smaller.append(valor)
         
 
+print(f'The biggest weights with {bigger[0][1]} are: ', end='')
+for c, v in enumerate(bigger):
+    print(f'{v[0]}... ', end='')
+print()
 
-print(f'The biggest weights are: {bigger}')
-print(f'The smallest weights are: {smaller}')
+print(f'The smallest weights with {smaller[0][1]} are: ', end='')
+for c, v in enumerate(smaller):
+    print(f'{v[0]}... ', end='')
+print()
 
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés E Ao Seu Filho Amado Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo. Para Sempre Seja Louvado. Amém.
