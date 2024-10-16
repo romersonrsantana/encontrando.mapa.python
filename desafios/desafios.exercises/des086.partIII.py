@@ -34,15 +34,15 @@ for c in range(0, 3):
 
 for c, v in enumerate(vetor):
     if c <= 1:
-        print(v, end='')
+        print(f' {v} ', end='')
     elif c == 2:
-        print(v)
+        print(f' {v} ')
     elif c < 5:
-        print(v, end='')
+        print(f' {v} ', end='')
     elif c == 5:
-        print(v)
+        print(f' {v} ')
     else:
-        print(v, end='')
+        print(f' {v} ', end='')
 print()
 
 #Te Amo Pai Celestial, Papai do Céu, Deus de Abraão, Isaac, Jacó, Israel e Moisés, Te Amo Espírito Santo, Te Amo Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo, Para Sempre Seja Louvado. Amém.
