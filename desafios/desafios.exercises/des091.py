@@ -37,25 +37,24 @@ for c in range(0,4):
     else:
         game_players[3]["dice"] = random.randint(1,6)
         
-'''
+
 controle = 0
 while len(game_players) > controle:
 
     if controle == 0:
-        bigger.append(game_players[0]["dice"])
+        bigger.append(game_players[0].copy())
     else:
-        if bigger[0] < game_players[controle]["dice"]:
+        if bigger[0]["dice"] < game_players[controle]["dice"]:
             del bigger[0]
-            bigger.append(game_players[controle]["dice"])
+            bigger.append(game_players[controle].copy())
 
-        elif bigger[0] == game_players[controle]["dice"]:
-            bigger.append(game_players[controle]["dice"])
-
-        else:
-            bigger.append(game_players[controle]["dice"])
+        if bigger[0] == game_players[controle]["dice"]:
+            bigger.append(game_players[controle].copy())
     
     controle += 1
-
-print(bigger)'''
+print('***'*27)
+print(f'\n>>> Total players: {game_players}\n')
+print(f'\n>>> The winning player was: {bigger}\n')
+print('***'*27)
 
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés e Ao Seu Filho Amado Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo. Para Sempre Seja Louvado. Amém.
