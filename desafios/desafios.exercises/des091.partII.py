@@ -30,6 +30,7 @@ for c in game_playes:
     for v in c.values():
         if control == 0:
             biggest.append(c.items())
+
         else:
             if biggest[0][f'person{control}'] < c.values():
                 biggest.insert(c, 0)
@@ -37,7 +38,8 @@ for c in game_playes:
                 biggest.insert(c, 1)
             else:
                 biggest.append(c)
-        control += 1
+
+        #control += 1
             
 print(f'Dice {game_playes}')
 
