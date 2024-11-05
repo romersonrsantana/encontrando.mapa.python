@@ -4,15 +4,15 @@ print('---'*27)
 
 def adicionando_inventario(inventory, add_to_items):
 
-    for c in resultado:
+    for c in add_to_items:
 
-        inventario.setdefault(c, 0)
+        inventory.setdefault(c, 0)
 
-        inventario[c] = inventario[c] + 1
+        inventory[c] = inventory[c] + 1
 
 def layout(chaves):
     total = 0
-    
+
     for k, v in chaves.items():
         print(f'   >>> Item {k} : {v}.')
         total += v
