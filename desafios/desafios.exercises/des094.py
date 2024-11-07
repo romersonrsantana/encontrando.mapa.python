@@ -3,13 +3,16 @@ print(' '*36, 'Data history')
 print('---'*27)
 
 person = dict()
+woman = list()
+up_age = list()
 people_list = list()
+total = control = 0
 
 while True:
     print()
     person[f'name'] = str(input('>>> Enter a Name: '))
     print()
-    person[f'sexo'] = str(input('>>> Write the sexo (M - masculino or F - feminino) '))
+    person[f'sexo'] = str(input('>>> Write the sexo (M - masculino or F - feminino) '))[0].lower()
     print()
     person[f'age'] = int(input(f">>> Enter the {person[f'name']}'s age "))
     print()
@@ -22,6 +25,31 @@ while True:
 
     if choise == 'n':
         break
-print(people_list)
+# ---------------- Identifying Women -------------------- 
+for c in people_list:
+    for k, v in c.items():
+        if v == 'f' or v == 'feminino':
+            woman.append(c.copy())
+
+# --------------- Average Age -------------------------- 
+        if k == 'age':
+            total += v
+            control += 1
+
+# -------------- Above average Age ---------------------
+for c in people_list:
+    for k, v in c.items(): 
+        if k == 'age' and v > total/control:
+            up_age.append(c.copy())
+
+print('==='*36)
+print(f'  >>> Total number of registered people {len(people_list):-^9}.')
+print()
+print(f'  >>> The average age of the group {total/control:-^9},')
+print()
+print(f'  >>> Registered Women {woman}.')
+print()
+print(f'  >>> People above average age {up_age}.')
+print()
 
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés E Ao Seu Filho Amado Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo, Para Sempre Seja Louvado. Amém.
