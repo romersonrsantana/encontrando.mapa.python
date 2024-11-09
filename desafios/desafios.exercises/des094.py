@@ -8,6 +8,12 @@ up_age = list()
 people_list = list()
 total = control = 0
 
+def layout(dicionary):
+    for c in dicionary:
+        for k, v in c.items():
+            if k == 'name':
+                print(f'{v}... ', end='')
+
 while True:
     print()
     person[f'name'] = str(input('>>> Enter a Name: '))
@@ -42,14 +48,18 @@ for c in people_list:
         if k == 'age' and v > total/control:
             up_age.append(c.copy())
 
-print('==='*36)
-print(f'  >>> Total number of registered people {len(people_list):-^9}.')
+print('==='*27)
+print(f'  >>> Total number of registered people: -- {len(people_list)} --.')
 print()
-print(f'  >>> The average age of the group {total/control:-^9},')
+print(f'  >>> The average age of the group: -- {total/control:.2f} --.')
 print()
-print(f'  >>> Registered Women {woman}.')
+print(f'  >>> Registered Women:   ', end='')
+layout(woman)
 print()
-print(f'  >>> People above average age {up_age}.')
+print()
+print(f'  >>> People above average age:   ', end='')
+layout(up_age)
+print()
 print()
 
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés E Ao Seu Filho Amado Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo, Para Sempre Seja Louvado. Amém.
