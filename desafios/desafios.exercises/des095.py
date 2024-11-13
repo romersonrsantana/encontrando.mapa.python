@@ -41,5 +41,17 @@ for indice, dados in enumerate(date_list):
     for k, v in dados.items():  
         print(f'{v}'.center(18,' '), end='')
     print()
+
+while True:
+    choise_II = int(input('Do you want to see details of player?(Enter the code or enter 999 to exit.) --> '))
+
+    if choise_II == 999:
+        print('Program closed!')
+        break
+    else:
+        for c in date_list[choise_II]:
+            if 'goals' == c:
+                for num, i in enumerate(date_list[choise_II]['goals']):
+                    print(f'>>> In the {num}st game, {date_list[choise_II]['name']}: {i} goals.')
        
 #Toda Honra e Toda Glória Ao Deus de Abraão, Isaac, Jacó, Israel e Moisés E Ao Seu Único Filho Nosso Senhor Jesus Cristo. Louvado Seja Nosso Senhor Jesus Cristo, Para Sempre Seja Louvado. Amém.
