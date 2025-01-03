@@ -30,13 +30,15 @@ while True:
     elif choice == 'b':
         parameter(12, 0-1, -1)
     elif choice == 'c':
-        one = int(input('       Enter a number to start: >>> '))
+        one = int(input('''
+        Enter a number to start: >>> '''))
         two = int(input('''       
-                        Enter a number to finalize: 
-            (For countdown enter the highest value followed by the stop value with the step(arithmic radio) 
-            **must be a negative number) 
-                        >>> '''))
-        three = int(input('     Enter a number to step: >>> ')  )
+        Enter a number to finalize: >>> '''))
+        three = int(input('''     
+        Enter a number to step: 
+        (For countdown enter the highest value followed by the stop value with the step(arithmic radio) 
+                    **must be a negative number) 
+          >>> ''')  )
         parameter(one, two, three)
     elif choice == 'd':
         break
