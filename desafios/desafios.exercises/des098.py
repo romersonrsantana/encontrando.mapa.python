@@ -39,6 +39,12 @@ while True:
         (For countdown enter the highest value followed by the stop value with the step(arithmic radio) 
                     **must be a negative number) 
           >>> ''')  )
+        if three == 0:
+            three = 1
+            print('''      
+
+                  [Alert] You entered '0' step considered '1'. ''')
+        
         parameter(one, two, three)
     elif choice == 'd':
         break
