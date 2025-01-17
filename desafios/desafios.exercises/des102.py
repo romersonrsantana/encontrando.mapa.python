@@ -5,6 +5,10 @@ def layout(caracter, msg):
 
 
 def factorial(number, show=0):
+    """
+    -> Em number você pode inserir o valor que deseja encntrar o factorial.
+    -> Show apresenta a possibildade de ver ou não o calculo.
+    """
     if show == 0:
         factorial = 1
         while number > 0:
