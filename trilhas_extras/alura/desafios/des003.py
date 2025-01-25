@@ -19,22 +19,33 @@ def main():
     dados_login = 'Tereza'
     dados_senha = '5655'
 
-    login = obter_usuario()
-    senha = obter_senha()
+    tentativa = 0
+    maxima_tentativas = 4
 
-    match (login, senha):
+    while tentativa < maxima_tentativas:
+        login = obter_usuario()
+        senha = obter_senha()
+         
+        match (login, senha):
 
-        case _ if dados_login == login and dados_senha == senha:
-            print("""
+            case _ if dados_login == login and dados_senha == senha:
+                print("""
                   
 █░█░█ █▀▀ █░░ █▀▀ █▀█ █▀▄▀█ █▀▀
 ▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █░▀░█ ██▄
                   """)
-        
-        case _ if dados_login != login or dados_senha != senha:
-                print("""[Erro]​​​​ Informe novamente!""")
+                break
+
+            case _ if tentativa == 2:
                 print()
-                main()
+                print(f'[Alert] Número máximo de tentativas atingido. Acesso bloqueado.')
+                print()
+                break
+        
+            case _ if dados_login != login or dados_senha != senha:
+                    tentativa += 1
+                    print(f"""[Erro]​​​​ Informe novamente! {tentativa} de {maxima_tentativas - 1}""")
+                    print()
 
 if __name__ == '__main__':
     main()
