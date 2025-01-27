@@ -5,22 +5,38 @@ def layout(caracter, msg):
 
 
 def obter_eixo_x():
-    while True:
+    tentativa = 0
+
+    while tentativa < 4:
         try:
             return int(input('>>> Informe o eixo X: '))
+        
         except ValueError:
-            print('\n       Informe um valor numerico: ')
+            tentativa += 1
+            print(f'\n       Informe um valor numerico (alerta para {tentativa}° tentativa): ')
             print()
+            if tentativa == 3:
+                mensagem_encerramento_tentativas()
+                exit()
 
 
 def obter_eixo_y():
-    while True:
+    tentativa = 0
+
+    while tentativa < 4:
         try:
             return int(input('>>> Informe o eixo Y: '))
         except ValueError:
-            print('\n Informe um valor numerico: ')
+            tentativa += 1
+            print(f'\n Informe um valor numerico (alerta para {tentativa}° tentativa): ')
             print()
+            if tentativa == 3:
+                mensagem_encerramento_tentativas()
+                exit()
 
+
+def mensagem_encerramento_tentativas():
+    layout('---', f'Você atingiu o número de tentativas!\nPrograma Encerrado!')
 
 def coordenadas(x, y):
     match(x, y):

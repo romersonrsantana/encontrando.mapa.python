@@ -5,10 +5,16 @@ def layout(caracter, msg):
 
 
 def record(name = 0, goals_total = 0):
+    elemento = 0
     if name != 0 or goals_total != 0:
         for k, v in football_players.items():
             if name == k or goals_total == v:
                 print(f'>>> Name: {k} : {v} goals.')
+            else:
+                elemento += 1
+                if name != k and goals_total != v:
+                    layout('---', f'Não há correspondência para o {elemento}° elemento na lista na lista')
+            
     else:
         print()
         print('     [Alert] Informe os dados...')
