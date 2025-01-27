@@ -13,7 +13,7 @@ def record(name = 0, goals_total = 0):
             else:
                 elemento += 1
                 if name != k and goals_total != v:
-                    layout('---', f'Não há correspondência para o {elemento}° elemento na lista na lista')
+                    layout('---', f'Não há correspondência para o {elemento}° elemento na lista')
             
     else:
         print()
