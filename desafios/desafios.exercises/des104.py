@@ -8,7 +8,7 @@ def layout(caractere, numero_multiplicador, msg):
 def leia_numero():
     while True:
         try:
-            print('Digite um número inteiro: ')
+            print('Digite um valor numérico: ')
             return float(input('>>> '))
         except ValueError:
             layout('---', 27, '[Alert] Digite um valor numérico!')
