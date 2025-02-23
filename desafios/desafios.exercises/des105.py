@@ -33,13 +33,40 @@ def adicionando_valor_dicionario():
     controle = True
     while controle != False:
         nota = verifica_numero()
-        notas_da_sala[f'nota {contador}'] = nota
+        notas_da_sala[f'nota {contador + 1}'] = nota
         controle = continuar()
         contador += 1
 
+def bigger():
+    maior = 0
+    for k, v in notas_da_sala.items():
+        if k == 'nota 1':
+            maior = v
+        else:
+            if maior < v:
+                maior = v
+    return maior
+
+def smaller():
+    menor = 0
+    for k, v in notas_da_sala.items():
+        if k == 'nota 1':
+            menor = v
+        else:
+            if v < menor:
+                menor = v
+    return menor
+
 def analisando_dicionario():
     limpar_tela()
-    print(notas_da_sala)
+    quantidade_de_notas = len(notas_da_sala)
+    layout('---', 36, f'--> Foram cadastradas {quantidade_de_notas} notas!')
+    maior_nota = bigger()
+    layout('===', 36, f'--> A maior nota foi {maior_nota}!')
+    menor_nota = smaller()
+    layout('---', 36, f'--> A menor nota foi {menor_nota}!')
+
+
 
 
 adicionando_valor_dicionario()
